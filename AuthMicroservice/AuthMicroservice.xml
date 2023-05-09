@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AuthMicroservice</name>
+    </assembly>
+    <members>
+        <member name="M:AuthMicroservice.Controllers.AuthController.Register(AuthMicroservice.Models.Requests.RegisterRequest)">
+            <summary>
+            Регистрация
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthMicroservice.Controllers.AuthController.Auth(AuthMicroservice.Models.Requests.AuthRequest)">
+            <summary>
+            Авторизация
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AuthMicroservice.Controllers.AuthController.GetUserInfo(System.String)">
+            <summary>
+            Информация о пользователе
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AuthMicroservice.DTO.ServiceResponse">
+            <summary>
+            Ответ слоя сервисов об (не)успешности 
+            операции
+            </summary>
+        </member>
+        <member name="F:AuthMicroservice.DTO.ServiceResponseStatuses.Sussess">
+            <summary>
+            Успешное действие
+            </summary>
+        </member>
+        <member name="F:AuthMicroservice.DTO.ServiceResponseStatuses.ValidationError">
+            <summary>
+            Невалидные входные данные
+            </summary>
+        </member>
+        <member name="F:AuthMicroservice.DTO.ServiceResponseStatuses.ApplicationError">
+            <summary>
+            Внутренняя ошибка приложения
+            </summary>
+        </member>
+        <member name="T:AuthMicroservice.Models.Requests.AuthRequest">
+            <summary>
+            Модель авторизации
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Requests.AuthRequest.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Requests.AuthRequest.Password">
+            <summary>
+            Пароль
+            </summary>
+        </member>
+        <member name="T:AuthMicroservice.Models.Requests.RegisterRequest">
+            <summary>
+            Модель регистрации
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Requests.RegisterRequest.UserName">
+            <summary>
+            Юзернейм
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Requests.RegisterRequest.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Requests.RegisterRequest.Password">
+            <summary>
+            Пароль
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Requests.RegisterRequest.Role">
+            <summary>
+            Роль
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Responses.AuthResponse.JwtToken">
+            <summary>
+            Jwt токен
+            </summary>
+        </member>
+        <member name="T:AuthMicroservice.Models.Responses.UserInfoResponse">
+            <summary>
+            Модель информации о пользователе
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Responses.UserInfoResponse.Id">
+            <summary>
+            Id пользователя
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Responses.UserInfoResponse.UserName">
+            <summary>
+            Имя пользователя
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Responses.UserInfoResponse.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:AuthMicroservice.Models.Responses.UserInfoResponse.Role">
+            <summary>
+            Роль
+            </summary>
+        </member>
+    </members>
+</doc>

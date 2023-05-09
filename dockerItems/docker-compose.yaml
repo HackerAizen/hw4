@@ -1,0 +1,50 @@
+
+version: '3.9'
+services:
+  postgres:
+    image: postgres:14.1-alpine
+    restart: always
+    networks:
+      - order-app
+    env_file:
+      - postgres.env
+    ports:
+      - '5432:5432'
+    environment:
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - ../postgresql/pg_data:/var/lib/postgresql/data
+      - ../postgresql:/docker-entrypoint-initdb.d
+      
+  auth-api:
+    restart: always
+    build:
+      context: ../
+      dockerfile: AuthMicroservice/Dockerfile
+    networks:
+      - order-app
+    ports:
+      - '8001:80'
+      
+  order-api:
+    restart: always
+    build:
+      context: ../
+      dockerfile: OrderMicroservice/Dockerfile
+    networks:
+      - order-app
+    ports:
+      - '8002:80'
+      
+  order-processor:
+    restart: always
+    build:
+      context: ../
+      dockerfile: OrderProcessor/Dockerfile
+    networks:
+      - order-app
+      
+      
+networks:
+  order-app:
+    driver: bridge

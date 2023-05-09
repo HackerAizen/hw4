@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrderMicroservice</name>
+    </assembly>
+    <members>
+        <member name="T:OrderMicroservice.Controllers.DishController">
+            <summary>
+            Управление блюдами
+            </summary>
+        </member>
+        <member name="M:OrderMicroservice.Controllers.DishController.GetById(System.Int32)">
+            <summary>
+            Получение блюда по Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderMicroservice.Controllers.DishController.CreateDish(OrderMicroservice.Models.Requests.CreateDishRequest)">
+            <summary>
+            Создание блюда
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OrderMicroservice.Controllers.DishController.Update(OrderMicroservice.Models.Requests.UpdateDishRequest)">
+            <summary>
+            Обнолвение блюда
+            </summary>
+            <param name="updateDishRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderMicroservice.Controllers.DishController.DeleteById(System.Int32)">
+            <summary>
+            Удаление блюда по Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderMicroservice.Controllers.DishController.GetMenu">
+            <summary>
+            Получение меню
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OrderMicroservice.Controllers.OrderController">
+            <summary>
+            Управление заказами
+            </summary>
+        </member>
+        <member name="M:OrderMicroservice.Controllers.OrderController.CreateOrder(OrderMicroservice.Models.Requests.CreateOrderRequest)">
+            <summary>
+            Создание заказа
+            </summary>
+            <param name="createOrderRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderMicroservice.Controllers.OrderController.GetOrderInfo(System.Int32)">
+            <summary>
+            Информация по заказу
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OrderMicroservice.DTO.ServiceResponse">
+            <summary>
+            Ответ слоя сервисов об (не)успешности 
+            операции
+            </summary>
+        </member>
+        <member name="F:OrderMicroservice.DTO.ServiceResponseStatuses.Sussess">
+            <summary>
+            Успешное действие
+            </summary>
+        </member>
+        <member name="F:OrderMicroservice.DTO.ServiceResponseStatuses.ValidationError">
+            <summary>
+            Невалидные входные данные
+            </summary>
+        </member>
+        <member name="F:OrderMicroservice.DTO.ServiceResponseStatuses.ApplicationError">
+            <summary>
+            Внутренняя ошибка приложения
+            </summary>
+        </member>
+        <member name="T:OrderMicroservice.Models.Requests.CreateDishRequest">
+            <summary>
+            Модель создания блюда
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Requests.CreateDishRequest.Name">
+            <summary>
+            Название блюда
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Requests.CreateDishRequest.Description">
+            <summary>
+            Описание блюда
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Requests.CreateDishRequest.Price">
+            <summary>
+            Цена блюда
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Requests.CreateDishRequest.Quantity">
+            <summary>
+            Количество штук блюда в наличии
+            </summary>
+        </member>
+        <member name="T:OrderMicroservice.Models.Requests.UpdateDishRequest">
+            <summary>
+            Модель обновления блюда
+            </summary>
+        </member>
+        <member name="T:OrderMicroservice.Models.Responses.UserInfoResponse">
+            <summary>
+            Модель информации о пользователе
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Responses.UserInfoResponse.Id">
+            <summary>
+            Id пользователя
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Responses.UserInfoResponse.UserName">
+            <summary>
+            Имя пользователя
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Responses.UserInfoResponse.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:OrderMicroservice.Models.Responses.UserInfoResponse.Role">
+            <summary>
+            Роль
+            </summary>
+        </member>
+    </members>
+</doc>
